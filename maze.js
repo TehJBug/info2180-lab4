@@ -11,24 +11,13 @@ window.onload = function(){ //load elements when the page/window loads
 
   start.addEventListener("mouseover", beginMaze);//begin when over S
 
-	function mouseOver()
-  {
-    //handler for mouseOver boundary
-    hit = true; //boundary has been touched
-		b1.className = "youlose boundary"; //change the classes
-		for (var i = 0; i<b.length-1; i++)
-    {
-			b[i].className = "youlose boundary";
-		}
-	};
-
   function restart()
   {
     //reloads by clicking s
-		location.reload();
-	};
+    location.reload();
+  };
 
-	function endMaze()
+  function endMaze()
   {
 			if (hit)//hit a wall?
       {
@@ -38,6 +27,17 @@ window.onload = function(){ //load elements when the page/window loads
       {
 				document.getElementById("status").innerHTML = "You win!";
 			}
+	};
+
+	function mouseOver()
+  {
+    //handler for mouseOver boundary
+    hit = true; //boundary has been touched
+		b1.className = "youlose boundary"; //change the classes
+		for (var i = 0; i<b.length-1; i++)
+    {
+			b[i].className = "youlose boundary";
+		}
 	};
 
   function beginMaze()
