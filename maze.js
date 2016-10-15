@@ -1,7 +1,10 @@
 window.onload = function(){ //load elements when the page/window loads
 
+  //get all boundaries
 	var start = document.getElementById("start");
-
+  var end = document.getElementById("end");
+	var boundary1 = document.getElementById("boundary1");
+	var boundary = document.querySelectorAll(".boundary");
   var hit = false;
 
 	function mouseOver(){ //handler for mouseOver boundary
