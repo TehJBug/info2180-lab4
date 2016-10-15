@@ -22,17 +22,6 @@ window.onload = function(){ //load elements when the page/window loads
 		}
 	};
 
-  function beginMaze()
-  {
-		start.addEventListener("click", restart);
-		b1.addEventListener("mouseover", mouseOver);
-
-		for (var j = 0; j < b.length-1; j++){
-			b[j].addEventListener("mouseover", mouseOver);
-		}
-		end.addEventListener("mouseover", endMaze);//end the maze when mouse hits E
-	};
-
   function restart()
   {
     //reloads by clicking s
@@ -49,6 +38,17 @@ window.onload = function(){ //load elements when the page/window loads
       {
 				document.getElementById("status").innerHTML = "You win!";
 			}
+	};
+
+  function beginMaze()
+  {
+		start.addEventListener("click", restart);
+		b1.addEventListener("mouseover", mouseOver);
+
+		for (var j = 0; j < b.length-1; j++){
+			b[j].addEventListener("mouseover", mouseOver);
+		}
+		end.addEventListener("mouseover", endMaze);//end the maze when mouse hits E
 	};
 
 };
